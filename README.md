@@ -1,7 +1,4 @@
-# Fridgy
-An ingredient tracker
-
-# APP_NAME_HERE
+# Spoiled
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -16,11 +13,11 @@ Spoiled (Fridgy) is an app that allows users to track the perishable goods in th
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:**   
-- **Mobile:** iOS
-- **Story:** See below
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Mobile:** This app would be primarily developed for mobile. It could potentially be integrated with calendar apps, such as Google Calendar.
+- **Story:** User can create and maintain a list of perishable goods, as well as expiration dates. The user can then browse recipes that they can prepare with available items. They will be notified on the day that an item is scheduled to expire.
+- **Market:** Any individual could choose to use this app, but our target audience would be people who create a healthier lifestyle.
+- **Habit:** This app can be the daily app for user to track food ingredient in their fridge as well as to use for smoothie recipe book based on existing ingredients. 
+- **Scope:** We would start by allowing the user browse simple smoothie recipes based on what items they have available. There is a potential for gamification and social networking, similar to Fitbit (that is outside of the scope of the current design).
 
 ## Product Spec
 
@@ -52,7 +49,7 @@ Spoiled (Fridgy) is an app that allows users to track the perishable goods in th
     * User can view items
 * Creation
     * User can create/delete items
-    * User can set an purchase/expiration date for each item
+    * User can set a purchase/expiration date for each item
 * Settings
     * User can set personal preferences
 * Favorites
