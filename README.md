@@ -12,7 +12,7 @@ Spoiled (Fridgy) is an app that allows users to track the perishable goods in th
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**   
+- **Category:** Health and utility.
 - **Mobile:** This app would be primarily developed for mobile. It could potentially be integrated with calendar apps, such as Google Calendar.
 - **Story:** User can create and maintain a list of perishable goods, as well as expiration dates. The user can then browse recipes that they can prepare with available items. They will be notified on the day that an item is scheduled to expire.
 - **Market:** Any individual could choose to use this app, but our target audience would be people who create a healthier lifestyle.
