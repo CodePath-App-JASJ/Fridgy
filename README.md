@@ -24,15 +24,14 @@ Spoiled (Fridgy) is an app that allows users to track the perishable goods in th
 ## 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-* User can view items
-* User can create/delete items
-* User can set an expiration date for each item
+* User can create/delete items (including name, quantity, and expiration date)
+* User can view the list of items
 * User can sort the list of items
-* User is notified an item is about to expire (e.g. banner notification) 
-* Recommended recipes
-* User is able to view recipe details
+* User is notified an item is about to expire via a banner notification. 
+* User can view a list of recommended recipes
+* User can view recipe details
 * User can set personal preferences
-* Users can save their favorite recipes
+* Users can save a list of their favorite recipes
 
 **Optional Nice-to-Have Stories**
 * User can register a new account
@@ -43,19 +42,19 @@ Spoiled (Fridgy) is an app that allows users to track the perishable goods in th
 ### 2. Screen Archetypes
 
 * Discover
-    * Recommended recipes
-    * User is notified an item is about to expire (e.g. banner notification) 
+    * User can view a list of recommended recipes
+    * User is notified an item is about to expire via a banner notification.
 * Log Ingredients
-    * User can view items
+    * User can view the list items
+    * User can sort the list of items
 * Creation
-    * User can create/delete items
-    * User can set a purchase/expiration date for each item
+    * User can create/delete items (including name, quantity, and expiration date)
 * Settings
     * User can set personal preferences
 * Favorites
-    * Users can save their favorite recipes
+    * Users can save a list of their favorite recipes
 * Detail
-    * User is able to view recipe details
+    * User can view recipe details
 
 ### 3. Navigation
 
