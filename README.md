@@ -1,9 +1,6 @@
 # Fridgy
 An ingredient tracker
 
-Original App Design Project - README Template
-===
-
 # APP_NAME_HERE
 
 ## Table of Contents
@@ -14,13 +11,13 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+Spoiled (Fridgy) is an app that allows users to track the perishable goods in their fridge. It also provides smoothie recipes based on the items that you have available.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
+- **Category:**   
+- **Mobile:** iOS
+- **Story:** See below
 - **Market:**
 - **Habit:**
 - **Scope:**
@@ -30,40 +27,54 @@ Original App Design Project - README Template
 ## 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-* User can create a list of items, grouped by category
+* User can view items
+* User can create/delete items
 * User can set an expiration date for each item
 * User can sort the list of items
 * User is notified an item is about to expire (e.g. banner notification) 
+* Recommended recipes
+* User is able to view recipe details
+* User can set personal preferences
+* Users can save their favorite recipes
 
 **Optional Nice-to-Have Stories**
 * User can register a new account
 * User can login
-* Recommended recipes
 * Recommended expiration dates
 * Integration w/Google calendar and Apple calendar
     
 ### 2. Screen Archetypes
 
-* Stream
+* Discover
+    * Recommended recipes
+    * User is notified an item is about to expire (e.g. banner notification) 
+* Log Ingredients
+    * User can view items
 * Creation
-   * User can create a list of items, grouped by category
+    * User can create/delete items
+    * User can set an purchase/expiration date for each item
+* Settings
+    * User can set personal preferences
+* Favorites
+    * Users can save their favorite recipes
+* Detail
+    * User is able to view recipe details
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Discover
+* Log Ingredients
+* Settings
+* Favorites
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Log Ingredients
+    * Creation
+* Discover
+    * Detail
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
