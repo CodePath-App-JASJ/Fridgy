@@ -75,21 +75,27 @@ Spoiled (Fridgy) is an app that allows users to track the perishable goods in th
 ## Wireframes
 
 Discover Page
+
 <img src="https://i.imgur.com/5golEwr.png" width=300>
 
 Favorites Page
+
 <img src="https://i.imgur.com/kOS5pCC.png" width=300>
 
 Detail Page
+
 <img src="https://i.imgur.com/l8G3aYY.png" width=300>
 
 Settings Page
+
 <img src="https://i.imgur.com/j1kUSt4.png" width=300>
 
 Log Ingredients Page
+
 <img src="https://i.imgur.com/lJkiQEH.png" width=300>
 
 Create Page
+
 <img src="https://i.imgur.com/CnfVq3a.png" width=300>
 
 ## Schema 
