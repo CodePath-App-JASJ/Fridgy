@@ -101,7 +101,37 @@ Create Page
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+#### Ingredient model
+
+|Property|Type|Desciption|
+| --- | :-- | :-- | 
+|item_id| String| unique id for item (default field)|
+|purchase_date| DateTime| purchase date of the item|
+|expiration_date| DateTime| expiration date of the item|
+|shelf_life| Number| days the item can last|
+|category_id| String| category id for the item|
+
+#### Recipe model
+
+|Property|Type|Desciption|
+| --- | :-- | :-- | 
+|recipe_id| String| unique id for recipe (default field)| 
+|image| File| Image for recipe|
+|instruction| String| instruction for recipe|
+|list_of_ingredients| String| list of ingredients for the recipe|
+|nutrition_fact| String| nutrition fact of the recipe|
+
+#### Profile model
+
+|Property|Type|Desciption|
+| --- | :-- | :-- | 
+|user_id| String| user profile id (default field)|
+|user_name| String| user profile name|
+|user_image| File| user profile picture|
+|notification| Boolean| user preference on notification(on/off)|
+|dietarty restrictions| String| user dietarty restrictions |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
