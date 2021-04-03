@@ -84,7 +84,7 @@ Favorites Page
 
 Detail Page
 
-<img src="https://i.imgur.com/l8G3aYY.png" width=300>
+<img src="https://i.imgur.com/0eeHYkn.png" width=300>
 
 Settings Page
 
