@@ -213,7 +213,7 @@ Create Page
     query.findObjectsInBackground { (ingredients: [PFObject]?, error: Error?) in
        if let error = error { 
           print(error.localizedDescription)
-       } else if let favorites = settings {
+       } else if let favorites = favorites {
           print("Successfully retrieved \(favorites.count) favorites.")
       // TODO: Do something with favorites...
        }
@@ -232,4 +232,16 @@ Create Page
     ```
 * Detail
     * (Read/GET) User can view recipe details
+    ```swift
+    let query = PFQuery(className:"Recipe")
+    query.whereKey("recipe", equalTo: currentRecipe)
+    query.findObjectsInBackground { (ingredients: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let recipes = recipes {
+          print("Successfully retrieved \(recipes.count) recipes.")
+      // TODO: Do something with recipes...
+       }
+    }
+    ``` 
 
