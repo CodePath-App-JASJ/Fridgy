@@ -177,7 +177,6 @@ Create Page
     }
     ``` 
 * Creation
-    * (Read/GET) Query a specific records where user is author
     * (Create/POST) Create a new record
     * (Delete) Delete an existing record
     * (Update/PUT) Update an existing record
