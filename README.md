@@ -153,5 +153,3 @@ Create Page
 * Detail
     * (Read/GET) User can view recipe details
 
-- TODO: [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
