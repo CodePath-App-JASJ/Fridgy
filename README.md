@@ -135,6 +135,18 @@ Create Page
 ### Networking
 * Discover
     * (Read/GET) Query all recipes
+    ```swift
+    let query = PFQuery(className:"Recipe")
+    query.order(byDescending: "createdAt")
+    query.findObjectsInBackground { (recipes: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let recipes = recipes {
+          print("Successfully retrieved \(recipes.count) recipes.")
+      // TODO: Do something with recipes...
+       }
+    }
+    ``` 
     * (Read/GET) Query all records where expiration date is today.
 * Log Ingredients
     * (Read/GET) Query all records where user is author
