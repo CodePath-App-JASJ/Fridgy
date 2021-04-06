@@ -178,6 +178,9 @@ Create Page
     ``` 
 * Creation
     * (Create/POST) Create a new record
+    ```swift
+    let myIngredient = PFObject(className:"Ingredient")
+    ```
     * (Delete) Delete an existing record
     ```swift
     PFObject.deleteAll(inBackground: objectArray) { (succeeded, error) in
@@ -220,6 +223,9 @@ Create Page
     }
     ``` 
     * (Create/POST) Create a new favorite
+    ```swift
+    let myFavorite = PFObject(className:"isFavorite")
+    ```
     * (Delete) Delete an existing favorite
     ```swift
     PFObject.deleteAll(inBackground: objectArray) { (succeeded, error) in
