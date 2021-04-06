@@ -148,8 +148,34 @@ Create Page
     }
     ``` 
     * (Read/GET) Query all records where expiration date is today.
+    ```swift
+    let query = PFQuery(className:"Ingredient")
+    query.whereKey("expiresAt", equalTo: currentDate)
+    query.whereKey("author", equalTo: currentUser)
+    query.findObjectsInBackground { (ingredients: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let ingredients = ingredients {
+          print("Successfully retrieved \(ingredients.count) ingredients.")
+      // TODO: Do something with ingredients...
+       }
+    }
+    ``` 
 * Log Ingredients
     * (Read/GET) Query all records where user is author
+    ```swift
+    let query = PFQuery(className:"Ingredient")
+    query.whereKey("author", equalTo: currentUser)
+    query.order(byDescending: "createdAt")
+    query.findObjectsInBackground { (ingredients: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let ingredients = ingredients {
+          print("Successfully retrieved \(ingredients.count) ingredients.")
+      // TODO: Do something with ingredients...
+       }
+    }
+    ``` 
 * Creation
     * (Read/GET) Query a specific records where user is author
     * (Create/POST) Create a new record
