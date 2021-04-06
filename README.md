@@ -133,6 +133,26 @@ Create Page
 |dietarty restrictions| String| user dietarty restrictions |
 
 ### Networking
+* Discover
+    * (Read/GET) Query all recipes
+    * (Read/GET) Query all records where expiration date is today.
+* Log Ingredients
+    * (Read/GET) Query all records where user is author
+* Creation
+    * (Read/GET) Query a specific records where user is author
+    * (Create/POST) Create a new record
+    * (Delete) Delete an existing record
+    * (Update/PUT) Update an existing record
+* Settings
+    * (Read/GET) Query current user settings
+    * (Update/PUT) Update user settings
+* Favorites
+    * (Read/GET) Query all records that were favorited by the user
+    * (Create/POST) Create a new favorite
+    * (Delete) Delete an existing favorite
+* Detail
+    * (Read/GET) User can view recipe details
+
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
