@@ -150,7 +150,7 @@ Create Page
     * (Read/GET) Query all records where expiration date is today.
     ```swift
     let query = PFQuery(className:"Ingredient")
-    query.whereKey("expiresAt", equalTo: currentDate)
+    query.whereKey("expiration_date", equalTo: currentDate)
     query.whereKey("author", equalTo: currentUser)
     query.findObjectsInBackground { (ingredients: [PFObject]?, error: Error?) in
        if let error = error { 
