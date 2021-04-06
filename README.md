@@ -192,6 +192,9 @@ Create Page
     }
     ```
     * (Update/PUT) Update an existing record
+    ```swift
+    myIngredient = PFObject(className:"Ingredient")
+    ```
 * Settings
     * (Read/GET) Query current user settings
     ```swift
@@ -207,6 +210,10 @@ Create Page
     }
     ``` 
     * (Update/PUT) Update user settings
+    ```swift
+    settings["bannerAlert"] = isActive
+    settings["user"] = username
+    ```
 * Favorites
     * (Read/GET) Query all records that were favorited by the user
     ```swift
