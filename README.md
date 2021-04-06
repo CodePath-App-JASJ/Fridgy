@@ -179,14 +179,57 @@ Create Page
 * Creation
     * (Create/POST) Create a new record
     * (Delete) Delete an existing record
+    ```swift
+    PFObject.deleteAll(inBackground: objectArray) { (succeeded, error) in
+        if (succeeded) {
+            // The array of objects was successfully deleted.
+        } else {
+            // There was an error. Check the errors localizedDescription.
+        }
+    }
+    ```
     * (Update/PUT) Update an existing record
 * Settings
     * (Read/GET) Query current user settings
+    ```swift
+    let query = PFQuery(className:"Settings")
+    query.whereKey("author", equalTo: currentUser)
+    query.findObjectsInBackground { (ingredients: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let settings = settings {
+          print("Successfully retrieved \(settings.count) settings.")
+      // TODO: Do something with settings...
+       }
+    }
+    ``` 
     * (Update/PUT) Update user settings
 * Favorites
     * (Read/GET) Query all records that were favorited by the user
+    ```swift
+    let query = PFQuery(className:"Favorites")
+    query.whereKey("author", equalTo: currentUser)
+    query.whereKey("isFavorite", equalTo: true)
+    query.findObjectsInBackground { (ingredients: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let favorites = settings {
+          print("Successfully retrieved \(favorites.count) favorites.")
+      // TODO: Do something with favorites...
+       }
+    }
+    ``` 
     * (Create/POST) Create a new favorite
     * (Delete) Delete an existing favorite
+    ```swift
+    PFObject.deleteAll(inBackground: objectArray) { (succeeded, error) in
+        if (succeeded) {
+            // The array of objects was successfully deleted.
+        } else {
+            // There was an error. Check the errors localizedDescription.
+        }
+    }
+    ```
 * Detail
     * (Read/GET) User can view recipe details
 
