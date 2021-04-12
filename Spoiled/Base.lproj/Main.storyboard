@@ -65,6 +65,7 @@
                     <connections>
                         <outlet property="passwordField" destination="Zh5-2h-3Rd" id="hyf-x7-c9w"/>
                         <outlet property="usernameField" destination="WuY-fJ-qIs" id="6Nm-3H-RJl"/>
+                        <segue destination="j2B-kY-0NH" kind="presentation" id="ZBH-8a-ZJK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,7 +77,7 @@
             <objects>
                 <viewController id="FN4-gk-PkG" customClass="FridgeViewController" customModule="Spoiled" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vdn-pm-KYF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fFB-29-SmM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -93,7 +94,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j2B-kY-0NH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VXb-Ob-6Wi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
