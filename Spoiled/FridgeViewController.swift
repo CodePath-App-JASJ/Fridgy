@@ -8,12 +8,23 @@
 import UIKit
 
 class FridgeViewController: UIViewController {
+    
+//    @IBAction var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func didTapButton() {
+        
+        let vc = UIViewController()
+        vc.view.backgroundColor = .white
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
     
 
     /*
@@ -27,3 +38,15 @@ class FridgeViewController: UIViewController {
     */
 
 }
+
+//extension FridgeViewController: UITableViewDelegate {
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: IndexPath, animated: true)
+//    }
+//
+//}
+//
+//extension FridgeViewController: UITableViewDataSource {
+//
+//}
