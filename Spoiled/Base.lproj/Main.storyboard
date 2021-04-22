@@ -206,6 +206,9 @@
                                     <action selector="didTapButton" destination="cyh-fe-Jk9" eventType="touchUpInside" id="4gk-nD-RXR"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <segue destination="EyL-hb-w40" kind="presentation" id="iEB-cZ-Zob"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -213,12 +216,12 @@
             </objects>
             <point key="canvasLocation" x="1806" y="2367"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Item View Controller-->
         <scene sceneID="0nd-hT-LV2">
             <objects>
-                <viewController id="EyL-hb-w40" sceneMemberID="viewController">
+                <viewController id="EyL-hb-w40" customClass="AddItemViewController" customModule="Spoiled" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32s-de-lfR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bx6-zf-AAa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

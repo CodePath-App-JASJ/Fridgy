@@ -16,6 +16,7 @@
 		0D44B0EB26223DC5001788A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D44B0E926223DC5001788A6 /* LaunchScreen.storyboard */; };
 		0D44B0F626223DC5001788A6 /* SpoiledTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D44B0F526223DC5001788A6 /* SpoiledTests.swift */; };
 		0D44B10126223DC5001788A6 /* SpoiledUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D44B10026223DC5001788A6 /* SpoiledUITests.swift */; };
+		0DB2CC5E26321DB1008646A2 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2CC5D26321DB1008646A2 /* AddItemViewController.swift */; };
 		5F4F487F3B9D8CCF6C3D0DA9 /* Pods_Spoiled.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A60494CD405867B4946FFFF /* Pods_Spoiled.framework */; };
 		754964F74640B44C7E6E48E7 /* Pods_Spoiled_SpoiledUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803904D69969F78FDB569740 /* Pods_Spoiled_SpoiledUITests.framework */; };
 		C13EFC9B0324215A46BBE9E3 /* Pods_SpoiledTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0443818022F86DB094E20186 /* Pods_SpoiledTests.framework */; };
@@ -55,6 +56,7 @@
 		0D44B0FC26223DC5001788A6 /* SpoiledUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpoiledUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D44B10026223DC5001788A6 /* SpoiledUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoiledUITests.swift; sourceTree = "<group>"; };
 		0D44B10226223DC5001788A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DB2CC5D26321DB1008646A2 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		0F55C6C67A2CE20299721127 /* Pods-Spoiled.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spoiled.debug.xcconfig"; path = "Target Support Files/Pods-Spoiled/Pods-Spoiled.debug.xcconfig"; sourceTree = "<group>"; };
 		4A60494CD405867B4946FFFF /* Pods_Spoiled.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spoiled.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1153C95B831B3F79CBE3B8 /* Pods-Spoiled-SpoiledUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spoiled-SpoiledUITests.release.xcconfig"; path = "Target Support Files/Pods-Spoiled-SpoiledUITests/Pods-Spoiled-SpoiledUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				0D44B0EC26223DC5001788A6 /* Info.plist */,
 				0D3DF79026250178009C3FB5 /* LoginViewController.swift */,
 				0D3DF79526250186009C3FB5 /* FridgeViewController.swift */,
+				0DB2CC5D26321DB1008646A2 /* AddItemViewController.swift */,
 			);
 			path = Spoiled;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB2CC5E26321DB1008646A2 /* AddItemViewController.swift in Sources */,
 				0D3DF79126250178009C3FB5 /* LoginViewController.swift in Sources */,
 				0D3DF79626250186009C3FB5 /* FridgeViewController.swift in Sources */,
 				0D44B0DF26223DC3001788A6 /* AppDelegate.swift in Sources */,
