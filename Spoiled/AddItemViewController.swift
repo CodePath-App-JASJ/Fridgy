@@ -6,14 +6,39 @@
 //
 
 import UIKit
+import Parse
 
-class AddItemViewController: UIViewController {
-
+class AddItemViewController: UIViewController{
+    
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var expirationInput: UITextField!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func onAddIngredientButton(_ sender: Any) {
+        let ingredient = PFObject(className: "Ingredients")
+        ingredient["name"] = nameInput.text!
+        ingredient["expiration"] = expirationInput.text!
+        ingredient["author"] = PFUser.current()
+        
+        ingredient.saveInBackground { (success, error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("Saved!")
+            }else{
+                print("Error!")
+            }
+        }
+    }
+    
+    @IBAction func onCancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
 
     /*

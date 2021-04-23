@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Parse
 
-class FridgeViewController: UIViewController {
+class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-//    @IBAction var tableView: UITableView!
+    
+    @IBOutlet weak var ingredientTableView: UITableView!
+    var ingredients = [PFObject]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,46 @@ class FridgeViewController: UIViewController {
         
     }
     
+    @IBAction func onAddIngredientButton(_ sender: Any) {
+        performSegue(withIdentifier: "addIngredient", sender: nil)
+        print("Performing segue to add an ingredient!")
+    }
+ 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let query = PFQuery(className: "Ingredients")
+        query.includeKeys(["name", "expirationDate"])
+        query.limit = 20
+        
+        query.findObjectsInBackground{ (ingredients, error) in
+            if ingredients != nil{
+                self.ingredients = ingredients!
+                self.ingredientTableView.reloadData()
+            }
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            // TODO add implementation
+        
+        return ingredients.count
+    }
+        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            //TODO add implementation
+        let ingredient = ingredients[indexPath.section]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell") as! IngredientCell
+                
+                
+        let user = ingredient["author"] as! PFUser
+        cell.ingredientName.text = ingredient["name"] as! String
+        cell.expirationDate.text = ingredient["expiration"] as! String
+                
+        return cell
+        
+    }
     
 
     /*
