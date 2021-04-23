@@ -14,13 +14,15 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var ingredientTableView: UITableView!
     var ingredients = [PFObject]()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        ingredientTableView.delegate = self
+        ingredientTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
-    
+    /*
     @IBAction func didTapButton() {
         
         let vc = UIViewController()
@@ -29,16 +31,12 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
-    @IBAction func onAddIngredientButton(_ sender: Any) {
-        performSegue(withIdentifier: "addIngredient", sender: nil)
-        print("Performing segue to add an ingredient!")
-    }
- 
+ */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         let query = PFQuery(className: "Ingredients")
-        query.includeKeys(["name", "expirationDate"])
+        query.includeKeys(["name", "expiration"])
         query.limit = 20
         
         query.findObjectsInBackground{ (ingredients, error) in
@@ -49,11 +47,12 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
         }
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return ingredients.count
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            // TODO add implementation
-        
-        return ingredients.count
+        return 1
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,7 +61,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell") as! IngredientCell
                 
                 
-        let user = ingredient["author"] as! PFUser
+        //let user = ingredient["author"] as! PFUser
         cell.ingredientName.text = ingredient["name"] as! String
         cell.expirationDate.text = ingredient["expiration"] as! String
                 

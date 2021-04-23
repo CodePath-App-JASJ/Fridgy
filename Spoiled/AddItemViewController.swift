@@ -34,9 +34,7 @@ class AddItemViewController: UIViewController{
         }
     }
     
-    @IBAction func onCancelButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+    
     
     
     
