@@ -230,8 +230,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="948-Rt-e5R">
-                                <rect key="frame" x="159" y="395" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Food" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CxW-qI-mEo">
+                                <rect key="frame" x="66" y="102" width="283" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ingredientName:" destination="aCx-cB-sCv" eventType="editingDidEnd" id="F72-1o-4HR"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Expiration date" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hY-ef-8IY">
+                                <rect key="frame" x="66" y="165" width="283" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="948-Rt-e5R">
+                                <rect key="frame" x="159" y="381" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Ingridient">
                                     <color key="titleColor" systemColor="systemGreenColor"/>
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -240,54 +256,9 @@
                                     <action selector="onAddIngredientButton:" destination="EyL-hb-w40" eventType="touchUpInside" id="4ei-fo-XQ7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMa-Lc-q1z">
-                                <rect key="frame" x="20" y="111" width="81" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDp-O3-tGi">
-                                <rect key="frame" x="20" y="161" width="104" height="47.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CxW-qI-mEo">
-                                <rect key="frame" x="111" y="112" width="283" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="ingredientName:" destination="aCx-cB-sCv" eventType="editingDidEnd" id="F72-1o-4HR"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hY-ef-8IY">
-                                <rect key="frame" x="140" y="161" width="254" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bx6-zf-AAa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="FDp-O3-tGi" firstAttribute="leading" secondItem="bx6-zf-AAa" secondAttribute="leading" constant="20" id="0dx-HD-Ryp"/>
-                            <constraint firstItem="bx6-zf-AAa" firstAttribute="trailing" secondItem="948-Rt-e5R" secondAttribute="trailing" constant="158" id="5uK-BP-Du7"/>
-                            <constraint firstItem="oMa-Lc-q1z" firstAttribute="top" secondItem="bx6-zf-AAa" secondAttribute="top" constant="111" id="AFY-bJ-VHb"/>
-                            <constraint firstItem="9hY-ef-8IY" firstAttribute="leading" secondItem="FDp-O3-tGi" secondAttribute="trailing" constant="16" id="Az6-LV-TCa"/>
-                            <constraint firstItem="9hY-ef-8IY" firstAttribute="top" secondItem="CxW-qI-mEo" secondAttribute="bottom" constant="15" id="DYf-8K-rsG"/>
-                            <constraint firstItem="CxW-qI-mEo" firstAttribute="top" secondItem="bx6-zf-AAa" secondAttribute="top" constant="112" id="FvN-CG-7AQ"/>
-                            <constraint firstItem="FDp-O3-tGi" firstAttribute="top" secondItem="CxW-qI-mEo" secondAttribute="bottom" constant="15" id="Gyc-ba-RxH"/>
-                            <constraint firstItem="948-Rt-e5R" firstAttribute="leading" secondItem="bx6-zf-AAa" secondAttribute="leading" constant="159" id="JIO-wI-hKM"/>
-                            <constraint firstItem="9hY-ef-8IY" firstAttribute="top" secondItem="CxW-qI-mEo" secondAttribute="bottom" constant="15" id="Kw2-zc-CaE"/>
-                            <constraint firstItem="9hY-ef-8IY" firstAttribute="leading" secondItem="FDp-O3-tGi" secondAttribute="trailing" constant="16" id="QSR-Uz-6ZZ"/>
-                            <constraint firstItem="bx6-zf-AAa" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="CxW-qI-mEo" secondAttribute="trailing" constant="271" id="U0s-Qq-wx5"/>
-                            <constraint firstItem="bx6-zf-AAa" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="9hY-ef-8IY" secondAttribute="trailing" constant="242" id="bL4-zW-O53"/>
-                            <constraint firstItem="948-Rt-e5R" firstAttribute="top" secondItem="9hY-ef-8IY" secondAttribute="bottom" constant="200" id="e7Z-gJ-Yb9"/>
-                            <constraint firstItem="CxW-qI-mEo" firstAttribute="leading" secondItem="oMa-Lc-q1z" secondAttribute="trailing" constant="10" id="f1e-ZC-Has"/>
-                            <constraint firstItem="FDp-O3-tGi" firstAttribute="top" secondItem="oMa-Lc-q1z" secondAttribute="bottom" constant="15" id="giT-Vj-YLV"/>
-                            <constraint firstItem="CxW-qI-mEo" firstAttribute="leading" secondItem="oMa-Lc-q1z" secondAttribute="trailing" constant="10" id="oC0-99-TCv"/>
-                            <constraint firstItem="oMa-Lc-q1z" firstAttribute="leading" secondItem="bx6-zf-AAa" secondAttribute="leading" constant="20" id="oQK-Y9-SNJ"/>
-                            <constraint firstItem="bx6-zf-AAa" firstAttribute="bottom" secondItem="FDp-O3-tGi" secondAttribute="bottom" constant="478.32999999999998" id="u6A-zJ-XnV"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
