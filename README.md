@@ -264,4 +264,6 @@ Here is a walkthrough of implemented user stories as of April 16:
 <img src='http://g.recordit.co/9A5m6jwELi.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 Here is a gif to show progress as of April 23:
+
+
 ![](https://i.imgur.com/CNGB6nR.gif)
