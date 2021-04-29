@@ -174,7 +174,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Expiration Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGZ-dv-cDA">
-                                                    <rect key="frame" x="15.000000000000007" y="39" width="115.66666666666669" height="20.333333333333329"/>
+                                                    <rect key="frame" x="15" y="39" width="116" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -230,26 +230,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Food" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CxW-qI-mEo">
-                                <rect key="frame" x="66" y="102" width="283" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Food Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CxW-qI-mEo">
+                                <rect key="frame" x="60" y="100" width="294" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="ingredientName:" destination="aCx-cB-sCv" eventType="editingDidEnd" id="F72-1o-4HR"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Expiration date" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hY-ef-8IY">
-                                <rect key="frame" x="66" y="165" width="283" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Expiration Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hY-ef-8IY">
+                                <rect key="frame" x="60" y="164" width="294" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="948-Rt-e5R">
-                                <rect key="frame" x="159" y="381" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Ingridient">
-                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="948-Rt-e5R">
+                                <rect key="frame" x="144" y="228" width="130" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Add Ingredient">
+                                    <color key="titleColor" red="0.28616555165775237" green="0.49084936712206029" blue="0.22529620048942195" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -259,9 +257,19 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bx6-zf-AAa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9hY-ef-8IY" firstAttribute="leading" secondItem="bx6-zf-AAa" secondAttribute="leading" constant="60" id="68m-X5-xPV"/>
+                            <constraint firstItem="948-Rt-e5R" firstAttribute="leading" secondItem="bx6-zf-AAa" secondAttribute="leading" constant="144" id="7na-B3-JLo"/>
+                            <constraint firstItem="9hY-ef-8IY" firstAttribute="top" secondItem="CxW-qI-mEo" secondAttribute="bottom" constant="30" id="ZGc-OC-Blh"/>
+                            <constraint firstItem="CxW-qI-mEo" firstAttribute="top" secondItem="bx6-zf-AAa" secondAttribute="top" constant="100" id="c3e-bT-cO4"/>
+                            <constraint firstItem="bx6-zf-AAa" firstAttribute="trailing" secondItem="CxW-qI-mEo" secondAttribute="trailing" constant="60" id="d1A-xT-g2e"/>
+                            <constraint firstItem="bx6-zf-AAa" firstAttribute="trailing" secondItem="948-Rt-e5R" secondAttribute="trailing" constant="140" id="hfb-TC-mXs"/>
+                            <constraint firstItem="CxW-qI-mEo" firstAttribute="leading" secondItem="bx6-zf-AAa" secondAttribute="leading" constant="60" id="ig4-ne-LKP"/>
+                            <constraint firstItem="948-Rt-e5R" firstAttribute="top" secondItem="9hY-ef-8IY" secondAttribute="bottom" constant="30" id="lfF-2v-FWi"/>
+                            <constraint firstItem="bx6-zf-AAa" firstAttribute="trailing" secondItem="9hY-ef-8IY" secondAttribute="trailing" constant="60" id="yAI-uN-nAN"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="expirationInput" destination="9hY-ef-8IY" id="8HF-sH-H3I"/>
                         <outlet property="nameInput" destination="CxW-qI-mEo" id="Y6H-p5-wga"/>

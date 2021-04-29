@@ -9,7 +9,7 @@ import UIKit
 import Parse
 
 class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+ 
     
     @IBOutlet weak var ingredientTableView: UITableView!
     var ingredients = [PFObject]()
@@ -17,11 +17,14 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
+    
+    
     /*
     @IBAction func didTapButton() {
         
