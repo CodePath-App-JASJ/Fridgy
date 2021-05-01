@@ -39,6 +39,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidAppear(animated)
         
         let query = PFQuery(className: "Ingredients")
+        query.whereKey("author", equalTo: PFUser.current())
         query.includeKeys(["name", "expiration"])
         query.limit = 20
         
