@@ -65,11 +65,10 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 
         //let user = ingredient["author"] as! PFUser
-        cell.ingredientName.text = ingredient["name"] as! String
-        cell.expirationDate.text = ingredient["expiration"] as! String
+        cell.ingredientName.text = ingredient["name"] as? String
+        cell.expirationDate.text = ingredient["expiration"] as? String
                 
         return cell
-        
     }
     
 
