@@ -72,7 +72,13 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
-
+    
+    @IBAction func addButtonSegue(_ sender: Any) {
+        self.performSegue(withIdentifier: "addIngredientSegue", sender: nil)
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
