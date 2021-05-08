@@ -231,6 +231,17 @@
                                     <action selector="ingredientName:" destination="aCx-cB-sCv" eventType="editingDidEnd" id="F72-1o-4HR"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuL-Oc-Jdw">
+                                <rect key="frame" x="142" y="531" width="130" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddIngredientButton:" destination="EyL-hb-w40" eventType="touchUpInside" id="lPB-AG-igg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bx6-zf-AAa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -239,6 +250,9 @@
                             <constraint firstItem="948-Rt-e5R" firstAttribute="leading" secondItem="bx6-zf-AAa" secondAttribute="leading" constant="144" id="7na-B3-JLo"/>
                             <constraint firstItem="5pu-mn-t2r" firstAttribute="leading" secondItem="bx6-zf-AAa" secondAttribute="leading" constant="68" id="B31-SX-qNQ"/>
                             <constraint firstItem="bx6-zf-AAa" firstAttribute="trailing" secondItem="NwB-vh-aQb" secondAttribute="trailing" constant="52" id="IGj-5v-Czm"/>
+                            <constraint firstItem="yuL-Oc-Jdw" firstAttribute="top" secondItem="948-Rt-e5R" secondAttribute="bottom" constant="25" id="IIA-Mw-SsA"/>
+                            <constraint firstItem="yuL-Oc-Jdw" firstAttribute="centerX" secondItem="CxW-qI-mEo" secondAttribute="centerX" id="LWJ-Vb-Lwk"/>
+                            <constraint firstItem="yuL-Oc-Jdw" firstAttribute="leading" secondItem="bx6-zf-AAa" secondAttribute="leading" constant="142" id="Qa9-O2-jsj"/>
                             <constraint firstItem="CxW-qI-mEo" firstAttribute="top" secondItem="bx6-zf-AAa" secondAttribute="top" constant="100" id="c3e-bT-cO4"/>
                             <constraint firstItem="948-Rt-e5R" firstAttribute="top" secondItem="lTs-3x-kmK" secondAttribute="bottom" constant="50" id="cEN-AF-pPK"/>
                             <constraint firstItem="bx6-zf-AAa" firstAttribute="trailing" secondItem="CxW-qI-mEo" secondAttribute="trailing" constant="60" id="d1A-xT-g2e"/>
@@ -268,6 +282,9 @@
         <image name="LoginIcon" width="248" height="102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
