@@ -29,7 +29,7 @@ Spoiled (Fridgy) is an app that allows users to track the perishable goods in th
 - [x] User can create/delete items (including name, quantity, and expiration date)
 - [x] User can view the list of items
 - [ ] User can sort the list of items
-- [x] User is notified an item is about to expire via a banner notification. 
+- [ ] User is notified an item is about to expire via a banner notification. 
 
 **Optional Nice-to-Have Stories**
 - [ ] User can view a list of recommended recipes

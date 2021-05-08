@@ -34,10 +34,9 @@ class AddItemViewController: UIViewController{
 
 
     @IBAction func onAddIngredientButton(_ sender: Any) {
+        
         let ingredient = PFObject(className: "Ingredients")
         ingredient["name"] = nameInput.text!
-        
-        
         
         let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd/yyyy"

@@ -42,12 +42,12 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // -------
         // Get count of expiring ingredients.
         let count = "1" // Placeholder
-        let queryIngredientCount = PFQuery(className: "Ingredients")
-        
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        let result = dateFormatter.string(from: date)
+//        let queryIngredientCount = PFQuery(className: "Ingredients")
+//
+//        let date = Date()
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "MM/dd/yyyy"
+//        let result = dateFormatter.string(from: date)
         
 //        queryIngredientCount.whereKey("author", equalTo: PFUser.current() as Any)
 //        queryIngredientCount.whereKey("expiration", equalTo: result as Any)
@@ -57,10 +57,10 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if self.isBeingPresented || self.isMovingToParent {
                 let banner = GrowingNotificationBanner(title: "Alert!",
                                                        subtitle: count + " ingredient is expiring soon.",
-                                                leftView: nil,
-                                                rightView: nil,
-                                                style: .danger,
-                                                colors: nil)
+                                                       leftView: nil,
+                                                       rightView: nil,
+                                                       style: .danger,
+                                                       colors: nil)
             
                 banner.autoDismiss = false
                 banner.dismissOnTap = true
