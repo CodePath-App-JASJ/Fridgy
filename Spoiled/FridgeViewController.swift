@@ -47,15 +47,18 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                         colors: nil)
         
         banner.autoDismiss = false
+        banner.dismissOnTap = true
         banner.show(queuePosition: .front,
                     bannerPosition: .top,
                     queue: .default,
                     on: self)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
             banner.dismiss()
         })
+        
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return ingredients.count
     }
