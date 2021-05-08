@@ -27,7 +27,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidAppear(animated)
         
         let query = PFQuery(className: "Ingredients")
-        query.whereKey("author", equalTo: PFUser.current())
+        query.whereKey("author", equalTo: PFUser.current() as Any)
         query.includeKeys(["name", "expiration"])
         query.limit = 20
         
@@ -39,24 +39,26 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
         }
         
-        let banner = GrowingNotificationBanner(title: "Alert!",
-                                        subtitle: "An ingredient is expiring soon.",
-                                        leftView: nil,
-                                        rightView: nil,
-                                        style: .danger,
-                                        colors: nil)
-        
-        banner.autoDismiss = false
-        banner.dismissOnTap = true
-        banner.show(queuePosition: .front,
-                    bannerPosition: .top,
-                    queue: .default,
-                    on: self)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-            banner.dismiss()
-        })
-        
+        if self.isBeingPresented || self.isMovingToParent {
+                let banner = GrowingNotificationBanner(title: "Alert!",
+                                                subtitle: "An ingredient is expiring soon.",
+                                                leftView: nil,
+                                                rightView: nil,
+                                                style: .danger,
+                                                colors: nil)
+            
+                banner.autoDismiss = false
+                banner.dismissOnTap = true
+                banner.show(queuePosition: .front,
+                            bannerPosition: .top,
+                            queue: .default,
+                            on: self)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                    banner.dismiss()
+                    
+                })
+            }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
