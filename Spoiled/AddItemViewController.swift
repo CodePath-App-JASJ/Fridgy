@@ -15,7 +15,10 @@ class AddItemViewController: UIViewController{
     
     @IBOutlet weak var expirationInput: UIDatePicker!
     
-
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func createDatePicker(){
         expirationInput.datePickerMode = .date
         expirationInput.preferredDatePickerStyle = .inline
