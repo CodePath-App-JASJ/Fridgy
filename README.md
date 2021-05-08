@@ -273,3 +273,7 @@ Here is a gif to show progress as of April 30:
 
 
 ![](http://g.recordit.co/sgWD6tZaC9.gif)
+
+Here is a gif to show progress as of May 7:
+
+![](https://i.imgur.com/Pjgt3UB.gif)
