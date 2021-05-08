@@ -39,9 +39,24 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
         }
         
+        // -------
+        // Get count of expiring ingredients.
+        let count = "1" // Placeholder
+        let queryIngredientCount = PFQuery(className: "Ingredients")
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        let result = dateFormatter.string(from: date)
+        
+//        queryIngredientCount.whereKey("author", equalTo: PFUser.current() as Any)
+//        queryIngredientCount.whereKey("expiration", equalTo: result as Any)
+        
+        // -------
+        
         if self.isBeingPresented || self.isMovingToParent {
                 let banner = GrowingNotificationBanner(title: "Alert!",
-                                                subtitle: "An ingredient is expiring soon.",
+                                                       subtitle: count + " ingredient is expiring soon.",
                                                 leftView: nil,
                                                 rightView: nil,
                                                 style: .danger,
@@ -70,7 +85,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            //TODO add implementation
+        //TODO add implementation
         let ingredient = ingredients[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell") as! IngredientCell
                 
