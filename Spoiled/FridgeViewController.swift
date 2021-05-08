@@ -20,22 +20,6 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
        
-        let banner = GrowingNotificationBanner(title: "Alert!",
-                                        subtitle: "An ingredient is expiring soon.",
-                                        leftView: nil,
-                                        rightView: nil,
-                                        style: .danger,
-                                        colors: nil)
-        
-        banner.autoDismiss = false
-        banner.show(queuePosition: .front,
-                    bannerPosition: .top,
-                    queue: .default,
-                    on: self)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-            banner.dismiss()
-        })
     }
     
 
@@ -54,6 +38,23 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
             
         }
+        
+        let banner = GrowingNotificationBanner(title: "Alert!",
+                                        subtitle: "An ingredient is expiring soon.",
+                                        leftView: nil,
+                                        rightView: nil,
+                                        style: .danger,
+                                        colors: nil)
+        
+        banner.autoDismiss = false
+        banner.show(queuePosition: .front,
+                    bannerPosition: .top,
+                    queue: .default,
+                    on: self)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            banner.dismiss()
+        })
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return ingredients.count
