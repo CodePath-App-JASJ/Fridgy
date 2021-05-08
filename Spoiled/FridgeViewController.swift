@@ -7,34 +7,38 @@
 
 import UIKit
 import Parse
+import NotificationBannerSwift
 
 class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
- 
     
     @IBOutlet weak var ingredientTableView: UITableView!
     var ingredients = [PFObject]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
-        // Do any additional setup after loading the view.
+       
+        let banner = GrowingNotificationBanner(title: "Alert!",
+                                        subtitle: "An ingredient is expiring soon.",
+                                        leftView: nil,
+                                        rightView: nil,
+                                        style: .danger,
+                                        colors: nil)
+        
+        banner.autoDismiss = false
+        banner.show(queuePosition: .front,
+                    bannerPosition: .top,
+                    queue: .default,
+                    on: self)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            banner.dismiss()
+        })
     }
     
-    
-    /*
-    @IBAction func didTapButton() {
-        
-        let vc = UIViewController()
-        vc.view.backgroundColor = .white
-        navigationController?.pushViewController(vc, animated: true)
-        
-    }
-    
- */
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
