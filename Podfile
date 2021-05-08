@@ -8,6 +8,7 @@ target 'Spoiled' do
   # Pods for Spoiled
   pod 'Parse'
   pod 'AlamofireImage'
+  pod 'NotificationBannerSwift', '~> 3.0.0' 
 
   target 'SpoiledTests' do
     inherit! :search_paths
